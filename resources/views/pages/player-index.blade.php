@@ -17,16 +17,16 @@
                                 Nome: {{ $player['nome'] }}
                             </li>
                             <li>
-                                Cognome: {{ $player['cognome'] }}
+                                Cognome: <span class="surname fw-bold"> {{ $player['cognome'] }} </span>
                             </li>
                             <li>
                                 Ruolo: {{ $player['ruolo'] }}
                             </li>
                             <li>
-                                Valore di mercato: {{ $player['valore_mercato'] }}
+                                Valore di mercato: <span class="value"> {{ $player['valore_mercato'] }} </span>
                             </li>
                             <li>
-                                URL immagine: <img src="{{ $player['immagine'] }}" alt="immagine">
+                                <img src="{{ $player['immagine'] }}" alt="immagine">
                             </li>
                         </ul>
                     </div>

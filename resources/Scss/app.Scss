@@ -4,7 +4,20 @@ ul {
     list-style-type: none;
 }
 
-img {
-    width: 300px;
-    height: 200px;
+.card {
+    background-color: #808080;
+
+    .surname {
+        color: black;
+    }
+
+    .value {
+        color: #EEBA01;
+    }
+
+    img {
+        width: 300px;
+        height: 200px;
+    }
+
 }
