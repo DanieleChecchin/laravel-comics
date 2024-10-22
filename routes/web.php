@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pages.home');
-});
+}) -> name('home') ;
+
+Route::get('/Players', function () {
+    $players =config('db.Players');
+    return view('pages.player-index', compact('players'));
+}) -> name('juventus-players');
