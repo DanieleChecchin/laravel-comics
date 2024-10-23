@@ -29,6 +29,7 @@ Route::get('/shop', function () {
     return view('pages.shop-index', compact('shop'));
 }) -> name('shop-index');
 
+// Calciatori show
 Route::get('/players/{index}', function (string $index) {
     $players =config('db.players');
     if(isset($players[$index])){
@@ -39,5 +40,15 @@ Route::get('/players/{index}', function (string $index) {
     return view('pages.player-show', compact('player'));
 }) -> name('players-show') ;
 
+// Shop show
+Route::get('/shop/{index}', function (string $index) {
+    $shop =config('dbShop.juventusMerch');
+    if(isset($shop[$index])){
+        $article = $shop[$index];
+    } else{
+        abort(404);
+    }
+    return view('pages.shop-show', compact('article'));
+}) -> name('shop-show') ;
 
 

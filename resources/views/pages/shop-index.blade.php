@@ -7,14 +7,16 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-12">
-                <h1> Juventus Shop index page</h1>
+                <h1> Juventus Shop index page </h1>
             </div>
             <div class="row justify-content-around">
-                @foreach ($shop as $article)
+                @foreach ($shop as $index => $article)
                     <div class="col-4 card m-2">
                         <ul>
                             <li>
-                                Prodotto: {{ $article['nome'] }}
+                                <a href="{{ route('shop-show', $index) }}">
+                                    Prodotto: {{ $article['nome'] }}
+                                </a>
                             </li>
                             <li>
                                 Anno di riferimnto: {{ $article['anno'] }}
