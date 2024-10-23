@@ -12,7 +12,7 @@
                         <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('juventus-players') }}">Juventus Player index</a>
+                        <a class="nav-link" href="{{ route('players-index') }}">Juventus Player index</a>
                     </li>
                 </ul>
             </div>

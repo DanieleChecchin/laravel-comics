@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'Players' => [
+    'players' => [
         [
             'nome' => 'Dusan',
             'cognome' => 'Vlahovic',

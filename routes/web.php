@@ -17,7 +17,18 @@ Route::get('/', function () {
     return view('pages.home');
 }) -> name('home') ;
 
-Route::get('/Players', function () {
-    $players =config('db.Players');
+Route::get('/players', function () {
+    $players =config('db.players');
     return view('pages.player-index', compact('players'));
-}) -> name('juventus-players');
+}) -> name('players-index');
+
+Route::get('/players/{index}', function (string $index) {
+    $players =config('db.players');
+    if(isset($players[$index])){
+        $player = $players[$index];
+    } else{
+        abort(404);
+    }
+    return view('pages.player-show', compact('player'));
+}) -> name('players-show') ;
+

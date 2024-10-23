@@ -10,11 +10,13 @@
                 <h1> Juventus Player index page</h1>
             </div>
             <div class="row justify-content-around">
-                @foreach ($players as $player)
+                @foreach ($players as $index => $player)
                     <div class="col-4 card m-2">
                         <ul>
                             <li>
-                                Nome: {{ $player['nome'] }}
+                                <a href="{{ route('players-show', $index) }}">
+                                    Nome: {{ $player['nome'] }}
+                                </a>
                             </li>
                             <li>
                                 Cognome: <span class="surname fw-bold"> {{ $player['cognome'] }} </span>
