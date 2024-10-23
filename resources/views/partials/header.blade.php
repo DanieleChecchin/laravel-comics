@@ -14,6 +14,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('players-index') }}">Juventus Player index</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('shop-index') }}">Juventus Shop index</a>
+                    </li>
                 </ul>
             </div>
         </div>
